@@ -1,5 +1,16 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SyncFusionScheduler.SchedulePage">
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    x:Class="SyncFusionScheduler.SchedulePage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:sfSchedule="clr-namespace:Syncfusion.SfSchedule.XForms;assembly=Syncfusion.SfSchedule.XForms">
     <ContentPage.Content>
+        <StackLayout>
+            <Label Text="OnAppearing: " />
+            <Label Text="{Binding OnAppearingTime}" />
+            <Label Text="AfterRender: " />
+            <Label Text="{Binding AfterRenderTime}" />
+            <sfSchedule:SfSchedule VisibleDatesChangedCommand="{Binding VisibleDatesChangedCommand}" />
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>
